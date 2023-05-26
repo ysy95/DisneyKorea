@@ -1,0 +1,1186 @@
+@charset "utf-8";
+article, section{
+  width:100%;
+}
+.main-video > h2{display: none;}
+.disney_films li:hover::after{
+  display: block;
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.5);
+  top:0px;left:0px;
+  z-index: 100; 
+}
+/* 브랜드로고 쉐이킹 */
+@keyframes shake {
+  0%{transform:rotate(0deg);}
+  25%{transform:rotate(-5deg);}
+  50%{transform: rotate(0deg);}
+  75%{transform: rotate(5deg);}
+  100%{transform: rotate(0deg);}
+}
+/* 화살표 바운스 */
+@keyframes bounce {
+  0%{bottom:5px;}
+  50%{bottom:-5px;}
+  100%{bottom:5px;}
+  
+}
+/* 채널 갤러리효과 */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      left:-400px;
+  }
+  to {
+      opacity: 1;
+      left:0px;
+  }
+}
+@keyframes fadeout{
+  from{
+      left:0px;
+      opacity: 1;
+  }
+  to{
+      left:-500px;
+      opacity: 0;
+  }
+} 
+.ch_gallery .item img{width:100%;height: 100%;}
+.disney_films img{
+  width:100%;
+  vertical-align: top;
+}
+a[title="맨위로올라가기"]{
+  position: fixed;
+  bottom:20px;right:20px;
+  width:50px;
+  z-index: 5;
+}
+a[title="맨위로올라가기"] img{
+  width: 100%;
+}
+@media screen and (min-width:1025px) {
+  header{
+    background: rgba(0, 0, 0, 0)!important;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+  header:hover{
+    background: #0a2647 !important;
+    transition: 0.4s;
+  }
+  .main-video {
+    width:100%;
+    position: relative;
+  }
+  .main-video > video{
+    width:100%;
+    z-index: 6;
+  }
+  .main-video > p {
+    position: absolute;
+    left: 47.5%; bottom:120px;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+  }
+  i.fa-arrow-down{
+    position: absolute;
+    left: 32%;bottom: 0px;
+    animation:bounce 2s infinite;
+    line-height: 50px;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  /* 이벤트서식 */
+  .event{
+    background: rgb(255, 255, 255);
+    position: relative;
+    top:-60px;
+    background-image: url('../main_img/event-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+  }
+  .title01{
+    display: flex;
+    justify-content: center;
+  }
+  .title01 > img{width:240px;}
+  .event > .e_wrap{
+    width:700px;
+    margin:0 auto;
+    padding-bottom: 50px;
+  }
+  
+  .event > .e_wrap > .title01 > h2{
+    color:#fff;
+    transform: translateY(65px);
+    font-size: 2.5rem;
+    margin-left:10px;
+  }
+  .event > .e_wrap > iframe{
+    margin-top: 20px;
+    width:100%;height: 395px;
+    border: #fff solid 4px;
+    /* width="560" height="315"  */
+  }
+  .e_wrap > ul{
+    text-indent: 7%;
+    font-size: 1.15rem;
+    margin-top: 30px;
+    border-radius: 15px;
+    line-height: 35px;
+    background: #fff;
+    padding:20px 0px 30px 0px;
+  }
+  .e_wrap > .e_txt > li:nth-of-type(4){
+    transform: translateY(-20px);
+  }
+  .e_txt > li > ul .e_sub{
+    text-indent: 20%;
+    transform: translateY(-30px);
+  }
+  .e_wrap > .e_txt >li:last-child{
+    margin-top: 10px;
+    position: relative;
+  }
+  .e_wrap > .e_txt >li:last-child img{
+    position: absolute;
+    right: 205px;bottom:-20px;
+    width:109px;
+  }
+  .e_wrap > .e_txt > li:last-child > a{
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #555;
+    padding:8px 60px; 
+    margin-left: 28%;
+    background:#2343D1;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  .e_wrap > .e_txt > li:last-child > a:hover{
+    border:solid 1px #333;
+    background: #fff;
+    color: #333;
+  }
+
+  
+  /* ------- 채널영역 서식 ------*/
+  .channel{}
+  .ch_wrap{
+    width: 1050px;
+    margin:0 auto;
+  }
+  .ch_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 3px #333;
+    padding:15px 0px;
+  }
+  .ch_wrap > p{
+    padding:20px 15px;
+    width:1040px;
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .ch_wrap > .ch_gallery{
+    position: relative;
+    background: #333;
+    display: grid;
+    width:100%;
+    grid-gap: 20px;
+    box-sizing: border-box;
+    padding:20px;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,190px);
+  }
+  .ch_wrap a{
+    /* margin: 40px 40px 0px 0px; */
+    background:#2343D1;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #555;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin:25px 0 0 37%;
+    display: block;
+    width:250px; height: 50px;
+  }
+
+  .ch_wrap a:hover{
+    border:solid 1px #333;
+    background: #fff;
+    color: #333;
+  }
+
+  /* 디즈니 플러스 관련 정보 */
+  .disney_films{
+    position:relative;
+  }
+  .disney_films > h2{
+    width: 1040px;
+    margin:80px auto 40px auto;
+    font-size:2.6rem;
+    border-bottom: solid 3px #333;
+    padding:15px 0px;
+  }
+  .disney_films > ul > li {
+    position:relative;
+    height:350px;
+  }
+  .disney_films > ul > li:first-child{
+    background-image: url('../main_img/movie1.png');
+    background-size: cover;}
+  .disney_films > ul > li:nth-child(2){background-image: url('../main_img/movie2.png');background-size: cover;}
+  .disney_films > ul > li:last-child{background-image: url('../main_img/movie3.png');background-size: cover;}
+  .disney_films > ul > li > .film_txt{
+    position:absolute;
+    left:0px; top:40px;
+    line-height: 80px;
+    color:#fff;
+    margin:0 auto;
+    font-size: 40px;
+    opacity: 0;
+    z-index:200;
+
+  }
+  .disney_films li:hover::after{
+    z-index:100;
+    display: block;
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    top:0px;left:0px;
+    
+  }
+  
+
+  /* 회사 정보 영역 서식 */
+  .company{}
+  .company > h2{
+    width: 1040px;
+    margin:50px auto 0px auto;
+    font-size:2.6rem;
+    border-bottom: solid 3px #333;
+    padding:15px 0px;
+  }
+  .com_wrap{
+    width: 1040px;
+    margin:40px auto 60px auto ;
+    display: flex;
+    justify-content: center;
+  }
+  .com_wrap img{width:350px;}
+  .com_wrap p{
+    text-align: justify;
+    width:565px;
+    line-height: 45px;
+    font-size: 1.3rem;
+    margin:10px 0px 0px 65px ;
+  }
+
+
+  /* 파트너사 브랜드 영역 서식 */
+  .b_wrap{
+    width: 1040px;
+    margin:0 auto;
+  }
+  .b_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 3px #333;
+    padding:15px 0px;
+  }
+  .b_wrap > p{
+    width:930px;
+    padding:20px;
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .b_wrap > .b_gallery{
+    display: grid;
+    background-image: url('../main_img/brand_bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding:15px;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,150px);
+  }
+  .b_gallery > .brand{
+    overflow: hidden;
+    transform: translateY(24%);
+    position: relative;
+  }
+  .b_gallery .brand img{width:70%;}
+  .b_gallery > .brand:first-child img{padding:20px 0px 0px 60px;}
+  .b_gallery > .brand:nth-child(2) img{padding:50px 0px 0px 30px;}
+  .b_gallery > .brand:nth-child(3) img{padding:5px 0px 0px 15px;}
+  .b_gallery > .brand:nth-child(4) img{padding:20px 0px 0px 60px;}
+  .b_gallery > .brand:nth-child(5) img{padding:13px 0px 0px 30px;}
+  .b_gallery > .brand:last-child img{padding:0px 0px 12px 40px;width:52%;}
+  .b_gallery > .brand img:hover{animation: shake 1s infinite;}
+
+  /* 새로운소식 */
+  .news{}
+  .news > .n_wrap{
+    width: 1040px;
+    margin: 0 auto;
+  }
+  .n_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:15px 0px;
+    display: flex;
+    position:relative;
+
+  }
+  .n_wrap > h2 > a{
+    border: solid 3px #333;
+    border-radius: 50px;
+    color:#333;
+    font-size: 20px;
+    font-weight: 500;
+    padding:3px 15px 3px 20px;
+    position:absolute;
+    right:13px; bottom:20px;
+  }
+  .n_wrap > .news_con{
+    margin:40px 0px 100px 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .n_wrap > .news_con li > p{text-overflow: ellipsis;}
+  .n_wrap > .news_con li:not(:first-child){
+    margin-left: 30px;
+  }
+  .n_wrap > .news_con img{width: 100%;}
+  .n_wrap > .news_con li p > a{
+    font-weight: 600;
+    text-overflow: ellipsis;
+    color: #333;
+  }
+  .n_wrap > .news_con p:last-child{margin-top: 20px;}
+  .n_wrap > .news_con li > .n_txt a{
+    color:#4D92E3;
+    font-size: 1rem;
+  }
+  .n_wrap > .news_con li p >.tag{
+    color:#333;
+    font-weight: normal;
+    border: solid 1px #333;
+    border-radius: 10px;
+    margin-right: 8px;
+    padding:5px;
+    box-shadow: 0.7px 1.5px 1px #666;
+
+  }
+
+
+
+  /* 문의사항 */
+  .faq{
+  }
+  
+  .faq > .faq_wrap{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto;
+    width:1040px;
+    height: 280px;
+    border-radius: 20px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+      linear-gradient(0deg, rgba(50, 226, 184, 0.27), rgba(50, 226, 184, 0.27)), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%);
+    border-radius: 50px;
+  }
+  .faq_wrap > .faq_txt{
+    margin:auto 0px;
+  }
+  .faq_wrap h2{
+    color:#fff;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  .faq_wrap > .faq_txt > p > a {
+    color: #333;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px #555;
+    padding:8px 15px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  } 
+  .faq_wrap img{
+    transform:translateY(10%);
+  }
+
+}
+
+/* 태블릿 */
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .main-video {
+    width:100%;
+    position: relative;
+  }
+  .main-video > video{
+    width:100%;
+  }
+  .main-video > p {
+    position: absolute;
+    left: 47%; bottom:80px;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+  }
+  i.fa-arrow-down{
+    position: absolute;
+    left: 26%;bottom: 0px;
+    animation:bounce 2s infinite;
+    line-height: 30px;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  /* 이벤트서식 */
+  .event{
+    background: #fff;
+    position: relative;
+    top:-40px;
+    background-image: url('../main_img/event-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+  }
+  .title01{
+    display: flex;
+    justify-content: center;
+  }
+  .title01 > img{width:15rem;}
+  .event > .e_wrap{
+    width:43rem;
+    margin:0 auto;
+    padding-bottom: 3.125rem;
+  }
+  
+  .event > .e_wrap > .title01 > h2{
+    color:#fff;
+    transform: translateY(4rem);
+    font-size: 2.4rem;
+    margin-left:0.625rem;
+  }
+  .event > .e_wrap > iframe{
+    margin-top: 1.25rem;
+    width:100%;height:29rem;
+    border: #fff solid 4px;
+    /* width="560" height="315"  */
+  }
+  .e_wrap > ul{
+    text-indent: 7%;
+    font-size: 1.15rem;
+    margin-top: 1.875rem;
+    border-radius: 15px;
+    line-height: 2.1875rem;
+    background: #fff;
+    padding:1.25rem 0px 1.875rem 0px;
+  }
+  .e_wrap > .e_txt > li:nth-of-type(4){
+    transform: translateY(-1.25rem);
+  }
+  .e_txt > li > ul .e_sub{
+    text-indent: 20%;
+    transform: translateY(-1.875rem);
+  }
+  .e_wrap > .e_txt >li:last-child{
+    margin-top: 0.625rem;
+    position: relative;
+  }
+  .e_wrap > .e_txt >li:last-child img{
+    position: absolute;
+    right: 205px;bottom:-1.25rem;
+    width:6.8125rem;
+  }
+  .e_wrap > .e_txt > li:last-child > a{
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #555;
+    padding:8px 60px; 
+    margin-left: 28%;
+    background:#2343D1;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  .e_wrap > .e_txt > li:last-child > a:hover{
+    border:solid 1px #333;
+    background: #fff;
+    color: #333;
+  }
+
+  
+  /* ------- 채널영역 서식 ------*/
+  .channel{
+    /* background: rgb(0, 255, 255); */
+  }
+  .ch_wrap{
+    width: 51rem;
+    margin:0 auto;
+  }
+  .ch_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .ch_wrap > p{
+    padding:1.25rem 0.9375rem;
+    width:50rem;
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .ch_wrap > .ch_gallery{
+    position: relative;
+    background: #333;
+    display: grid;
+    width:100%;
+    grid-gap: 1.25rem;
+    box-sizing: border-box;
+    padding:1.25rem;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,10.625rem);
+  }
+  .ch_wrap a{
+    /* margin: 40px 40px 0px 0px; */
+    background:#2343D1;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #555;
+    text-align: center;
+    line-height: 3.125rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin:1.5625rem 0 0 37%;
+    display: block;
+    width:15.625rem; height: 3.125rem;
+  }
+  /* 디즈니 플러스 관련 정보 */
+  .disney_films{position: relative;}
+  .disney_films > h2{
+    width: 49rem;
+    margin:5rem auto 2.5rem auto;
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .disney_films > ul > li {
+    position:relative;
+    height:300px;
+  }
+  .disney_films > ul > li:first-child{
+    background-image: url('../main_img/movie1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .disney_films > ul > li:nth-child(2){
+    background-image: url('../main_img/movie2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .disney_films > ul > li:last-child{
+    background-image: url('../main_img/movie3.png');
+    background-size: cover;
+      background-repeat: no-repeat;
+}
+  .disney_films > ul > li > .film_txt{
+    position:absolute;
+    left:0px; top:40px;
+    line-height: 80px;
+    color:#fff;
+    margin:0 auto;
+    font-size: 2rem;
+    opacity: 0;
+  }
+
+
+  /* 회사 정보 영역 서식 */
+  .company{
+  
+  }
+  .company > h2{
+    width: 49rem;
+    margin:5rem auto 0px auto;
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .com_wrap{
+    width: 49rem;
+    margin:2.5rem auto 3.75rem auto ;
+    display: flex;
+    justify-content: center;
+  }
+  .com_wrap img{
+    width:14.5rem;
+    height: 7.875rem;
+  }
+  .com_wrap p{
+    text-align: justify;
+    width:35rem;
+    line-height: 2.8125rem;
+    font-size: 1.3rem;
+    margin:0.625rem 0px 0px 4rem ;
+  }
+
+
+  /* 파트너사 브랜드 영역 서식 */
+  .b_wrap{
+    width: 49rem;
+    margin:0 auto;
+  }
+  .b_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .b_wrap > p{
+    width:48.125rem;
+    padding:1.25rem;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .b_wrap > .b_gallery{
+    display: grid;
+    background-image: url('../main_img/brand_bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding:15px;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,7.5rem);
+  }
+  .b_gallery > .brand{
+    overflow: hidden;
+    transform: translateY(18%);
+    position: relative;
+  }
+  .b_gallery .brand img{width:65%;}
+  .b_gallery > .brand:first-child img{padding:1.25rem 0px 0px 3.75rem;}
+  .b_gallery > .brand:nth-child(2) img{padding:50px 0px 0px 1.875rem;}
+  .b_gallery > .brand:nth-child(3) img{padding:5px 0px 0px 15px;}
+  .b_gallery > .brand:nth-child(4) img{padding:1.25rem 0px 0px 3.75rem;}
+  .b_gallery > .brand:nth-child(5) img{padding:13px 0px 0px 1.875rem;}
+  .b_gallery > .brand:last-child img{padding:0px 0px 12px 40px;width:52%;}
+
+  /* 새로운소식 */
+  .news{}
+  .news > .n_wrap{
+    width: 49rem;
+    margin: 0 auto;
+  }
+  .n_wrap > h2{
+    font-size:2.6rem;
+    border-bottom: solid 2px #333;
+    padding:15px 0px;
+    display: flex;
+    position:relative;
+  }
+  
+  .n_wrap > h2 > a{
+    border: solid 2px #333;
+    border-radius: 50px;
+    color:#333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding:3px 15px 3px 20px;
+    position:absolute;
+    right:13px; bottom:20px;
+  }
+  .n_wrap > .news_con{
+    margin:2.5rem 0px 6.25rem 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .n_wrap > .news_con li > p{text-overflow: ellipsis;}
+  .n_wrap > .news_con li:not(:first-child){
+    margin-left: 1.875rem;
+  }
+  .n_wrap > .news_con img{width: 100%;}
+  .n_wrap > .news_con li p > a{
+    font-weight: 600;
+    color: #333;
+  }
+  .n_wrap > .news_con p:first-child a{margin-bottom:2rem;}
+  .n_wrap > .news_con p:last-child{margin-top: 1.25rem;}
+  .n_wrap > .news_con li > .n_txt a{
+    color:#4D92E3;
+    font-size: 1rem;
+  }
+  .n_wrap > .news_con li p >.tag{
+    color:#333;
+    font-weight: normal;
+    border: solid 1px #333;
+    border-radius: 10px;
+    margin-right: 8px;
+    padding:5px;
+    box-shadow: 0.7px 1.5px 1px #666;
+
+  }
+
+
+
+  /* 문의사항 */
+  .faq{
+  }
+  
+  .faq > .faq_wrap{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2.5rem auto;
+    width:48rem;
+    height: 15rem;
+    border-radius: 20px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+      linear-gradient(0deg, rgba(50, 226, 184, 0.27), rgba(50, 226, 184, 0.27)), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%);
+    border-radius: 50px;
+  }
+  .faq_wrap > .faq_txt{
+    margin:auto 0px;
+  }
+  .faq_wrap h2{
+    color:#fff;
+    font-size: 1.625rem;
+    margin-bottom: 1.875rem;
+  }
+  .faq_wrap > .faq_txt > p > a {
+    color: #333;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px #555;
+    padding:0.5rem 0.9rem;
+    font-size: 1.05rem;
+    margin-left: 0.625rem;
+  } 
+  .faq_wrap img{
+    transform:translateY(10%);
+  }
+
+}
+
+@media screen and (max-width:767px) {
+  
+  .main-video {
+    width:100%;
+    position: relative;
+    top:45px;
+  }
+  .main-video > video{
+    width:100%;
+    
+  }
+  .main-video > p {
+    position: absolute;
+    left: 47%; bottom:50px;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+  }
+  i.fa-arrow-down{
+    position: absolute;
+    left: 27.5%;bottom: 0px;
+    animation:bounce 2s infinite;
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 11px;
+  }
+  
+  .event{
+    background: #fff;
+    position: relative;top:25px;
+    background-image: url('../main_img/event-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+  }
+  .title01{
+    display: flex;
+    justify-content: center;
+    height: 3.5rem;
+  }
+  .title01 > img{width:6.125rem;}
+  .event > .e_wrap{
+    width:80%;
+    margin:0 2.5rem;
+    padding:3.125rem 0rem;
+  }
+  
+  .event > .e_wrap > .title01 > h2{
+    color:#fff;
+    transform: translateY(1.4rem);
+    font-size: 1.2rem;
+    margin-left:0.4rem;
+    font-weight: 500;
+  }
+  .event > .e_wrap > iframe{
+    margin-top: 1.25rem;
+    width:100%;height: 14rem;
+    border: #fff solid 3px;
+  }
+  .e_wrap > ul{
+    width:100%;
+    font-size: 0.9rem;
+    border-radius: 15px;
+    line-height: 1.875rem;
+    background: #fff;
+    padding:1.3rem 5px 1rem 0px;
+    position:relative;
+    margin:1.875rem auto 0px auto;
+  }
+  .e_wrap > .e_txt > li{
+    width: 80%; 
+    margin-left:10%;
+    position: relative;
+  }
+  .e_wrap > .e_txt > li:nth-of-type(4){
+    transform: translateY(-0.9rem);
+  }
+  .e_txt > li > ul .e_sub{
+    text-indent: 23%;
+    transform: translateY(-1.9rem);
+  }
+  .e_wrap > .e_txt >li:last-child{
+    margin: 12% 19%;
+    position: relative;
+    width:250px;
+  }
+  .e_wrap > .e_txt >li:last-child img{
+    position: absolute;
+    right: 0rem;bottom:0rem;
+    width:4.9rem;
+  }
+  .e_wrap > .e_txt > li:last-child > a{
+    border-radius: 15px;
+    box-shadow: 1px 2px 2px #555;
+    text-align: center;
+    width:12rem;height: 2.1875rem; 
+    background:#2343D1;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 2.1875rem;
+    display: block;
+    position: absolute;
+    bottom:0.5rem;
+    left: 10%;
+  }
+  
+  /* ------- 채널영역 서식 ------*/
+  .channel{
+    position: relative;
+    top:40px;
+  }
+  .ch_wrap{
+    width: 80%;
+    margin:0 2.5rem;
+  }
+  .ch_wrap > h2{
+    font-size:1.25rem;
+    border-bottom: solid 3px #333;
+    padding:0.9375rem 0px;
+  }
+  .ch_wrap > p{
+    padding:1.25rem 0rem;
+    width:99%;
+    font-size: 0.875rem;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .ch_wrap > .ch_gallery{
+    position: relative;
+    background: #333;
+    display: grid;
+    width:20rem;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding:0.625rem;
+    margin:0 auto;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(4,7.5rem);
+  }
+  .ch_wrap > .ch_gallery li:last-child{display: none;}
+  .ch_wrap a{
+    background:#2343D1;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #555;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin:1.6rem 0 0 32%;
+    display: block;
+    width:8rem; height: 2.2rem;
+  }
+
+
+  /* 디즈니 플러스 관련 정보 */
+  .disney_films{
+    position:relative;
+    
+  }
+  .disney_films > h2{
+    width: 80%;
+    margin:5rem auto 2.5rem auto;
+    font-size:1.25rem;
+    border-bottom: solid 3px #333;
+    padding:0.9375rem 0rem;
+
+  }
+  .disney_films > ul > li {
+    position:relative;
+    height:300px;width:100%;
+  }
+  .disney_films > ul > li:first-child{
+    background-image: url('../main_img/m_movie1.png');
+    background-size: cover ;
+    background-repeat: no-repeat;
+  }
+  .disney_films > ul > li:nth-child(2){
+    background-image: url('../main_img/m_movie2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .disney_films > ul > li:last-child{
+    background-image: url('../main_img/m_movie3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-1rem);
+  }
+  .disney_films > ul > li > .film_txt{
+    position:absolute;
+    left:-20%; top:2.8rem;
+    line-height: 4rem;
+    color:#fff;
+    margin:0 auto;
+    font-size: 1rem;
+    opacity: 0;
+    z-index: 101;
+  }
+  
+
+  /* 회사 정보 영역 서식 */
+  .company{
+  
+  }
+  .company > h2{
+    width: 80%;
+    margin:5rem auto 0px auto;
+    font-size:1.25rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .com_wrap{
+    position:relative;
+    width: 78%;
+    margin:2rem auto 3.75rem auto ;
+  }
+  .com_wrap img{
+    position: relative;
+    left:20%;
+    width:11.5rem;
+    height: 6.25rem;
+    margin: 5% auto;
+  }
+  .com_wrap p{
+    position:relative;
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 0.875rem;
+
+  }
+
+
+  /* 파트너사 브랜드 영역 서식 */
+  .b_wrap{
+    width: 80%;
+    margin:0 auto;
+  }
+  .b_wrap > h2{
+    width: 100%;
+    margin:5rem auto 0px auto;
+    font-size:1.25rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+  }
+  .b_wrap > p{
+    margin: 0.825rem auto;
+    line-height: 2rem;
+    font-size: 0.875rem;
+    text-align: justify;
+    font-weight: 400;
+  }
+  .b_wrap > .b_gallery{
+    display: grid;
+    background-image: url('../main_img/m_brand_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-gap: 0.5rem;
+    box-sizing: border-box;
+    padding:0.9rem;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,6rem);
+  }
+  .b_gallery > .brand{
+    overflow: hidden;
+    position: relative;
+  }
+  .b_gallery .brand img{width:75%;}
+  .b_gallery > .brand:first-child img{padding:1.25rem 0px 0px 1.4rem;}
+  .b_gallery > .brand:nth-child(2) img{padding:30px 5px 0px 1.3rem;}
+  .b_gallery > .brand:nth-child(3) img{padding:5px 0px 0px 1.5rem;}
+  .b_gallery > .brand:nth-child(4) img{padding:1.1rem 0px 0px 1.6rem;}
+  .b_gallery > .brand:nth-child(5) img{padding:12px 0px 0px 1.4rem;}
+  .b_gallery > .brand:last-child img{padding:0px 0px 12px 2.3rem;width:55%;}
+
+  /* 새로운소식 */
+  .news{}
+  .news > .n_wrap{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .n_wrap > h2{
+    width: 100%;
+    margin:5rem auto 0px auto;
+    font-size:1.25rem;
+    border-bottom: solid 2px #333;
+    padding:0.9375rem 0px;
+    box-shadow: 0px 3px 0px #ccc;
+    position: relative;
+  }
+  .n_wrap > h2 > a{
+    color:#333;
+    padding:3px 8px 3px 13px;
+    border: solid 1px #333;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    position:absolute;
+    right:10px;
+
+  }
+  .n_wrap > .news_con{
+    margin:2.5rem 0px 6.25rem 0px;
+    position: relative;
+  }
+  .n_wrap > .news_con img{width: 100%;}
+  .n_wrap > .news_con li{
+    margin-bottom: 30px;
+  }
+  .n_wrap > .news_con > li:nth-of-type(3){display: none;}
+  .n_wrap > .news_con li p > a{
+    font-weight: 500;
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .n_wrap > .news_con p:last-child{margin-top: 1.25rem;}
+  .n_wrap > .news_con li > .n_txt a{
+    color:#4D92E3;
+    font-size: 1rem;
+  }
+  .n_wrap > .news_con li p >.tag{
+    color:#333;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border: solid 1px #333;
+    border-radius: 10px;
+    margin-right: 8px;
+    padding:5px;
+    box-shadow: 0.7px 1.5px 1px #666;
+
+  }
+  .n_wrap > .news_con > a{
+    border: solid 2px #333;
+    border-radius: 50px;
+    color:#333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding:3px 15px 3px 20px;
+
+  }
+
+  /* 문의사항 */
+  .faq{
+    position: relative;
+    width:100%;
+  }
+  
+  .faq > .faq_wrap{
+    position:relative;
+    justify-content:center;
+    margin: 15% auto;
+    width:80%;
+    height: 21rem;
+    border-radius: 20px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+      linear-gradient(0deg, rgba(50, 226, 184, 0.27), rgba(50, 226, 184, 0.27)), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%), 
+      linear-gradient(180deg, #387BCB 12.96%, rgba(56, 123, 203, 0.460779) 66.99%, rgba(56, 123, 203, 0) 100%);
+    border-radius: 50px;
+  }
+  .faq_wrap > .faq_txt{
+    margin:auto 0;
+    width:80%;
+  }
+  .faq_wrap h2{
+    position:absolute;
+    top:50%; left:5%;
+    color:#fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .faq_wrap h2 > a{display: none;}
+  .faq_wrap > .faq_txt > p{
+    margin:0 auto;
+    position: absolute;
+    bottom:13%;left:23%;
+    width:75%;
+  }
+  .faq_wrap > .faq_txt > p > a {
+    color: #333;
+    width:100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px #555;
+    padding:0.5rem 0.9rem;
+    font-size: 0.825rem;
+    margin-right: 5%;
+
+  } 
+  .faq_wrap img{
+    width:12rem;
+    position: absolute;
+    top: 22px;left: 19%;
+  }
+
+
+}

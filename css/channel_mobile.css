@@ -1,0 +1,288 @@
+@media screen and (max-width:767px){
+
+  #p_wrap,#m_wrap,#s_wrap,#n_wrap,#f_wrap{display: none;}
+
+  .d1_top{
+    position: relative; 
+    /* border-bottom: 3px solid #000; */
+  }
+  .d1_top::after{
+    display: block;
+    content: "";
+    /* height: 26vh; */ 
+    height: 260px;
+  }
+  /* .d1_top > div{
+    position: absolute; top: 0px;
+  }
+   */
+  .d1_top > div .asd{
+    width: 100%;
+    position: relative;
+  }
+  .d1_top> div > .asd> img{
+    width: 100%; height: 200px;
+    filter: brightness(50%);
+  }
+  
+ #d_wrap h2 img{
+    width: 40%;
+    position: absolute; top: 25%;
+    transform : translateX(-50%);
+  }
+  #p_wrap h2 img{
+    width: 38%;
+    position: absolute; top: 20%; 
+    transform : translateX(-50%);
+  }
+  
+  #m_wrap h2 img {width: 35%;
+    position: absolute; top: 25%; 
+    transform : translateX(-50%);}
+  
+  #s_wrap h2 img{width: 40%;
+    position: absolute; top: 30%; 
+    transform : translateX(-50%);}
+  
+  #n_wrap h2 img{width: 35%;
+    position: absolute; top: 30%;
+    transform : translateX(-50%);}
+  
+  #f_wrap h2 img{
+    width: 35%;
+    position: absolute; top: 20%; 
+    transform : translateX(-50%);
+  }
+  #f_wrap .sns img{ margin-left: 13px;}
+  
+  /* sns */
+  .sns{
+    display: flex;
+    justify-content: space-around;
+    position: absolute; bottom: 8%; left: 53%;
+    margin: 0px auto;
+    transform : translateX(-50%);
+    width: 20%;
+  }
+  .sns > li{text-align: center;}
+  .sns > li img{
+    
+    margin-right: 12px;
+    width: 6vw;
+  }
+ 
+  
+  /* #s_wrap,#n_wrap > .sns> li img{
+    position: absolute; 
+  } */
+
+
+
+/* 파트너사 */
+  /* #channel-wrap{height: 10vw;} */
+  .channel{
+    width: 100%;
+    height: 60vw;
+    box-sizing: border-box;
+    margin: 1px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-items: space-around; */
+    /* border: 1px; */
+    /* justify-content: space-around; */
+    /* margin-bottom: 50px */
+    align-content: center;
+    transform : translateX(2%);
+  }
+  .channel > li{
+  width: 30%; 
+  height: 20%;
+  border: 1px solid #000;
+  border-radius: 8%;
+  margin: 0px 10px 50px 0px;
+  text-align: center;
+  }
+  .channel > li img{
+  width: 70%;
+ transform: translateY(-10%);
+  }
+  .channel > li:not(:nth-child(3)) img{
+    transform: translateY(10%);
+  }
+  .p1{
+    padding-top: 15px;
+    box-sizing: border-box;
+  }
+  
+
+  .channel > .d1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);}
+  .channel > .p1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);}
+  .channel > .m1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);}
+  .channel > .s1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);}
+  .channel > .n1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);;}
+  .channel > .f1:hover{background: linear-gradient(180deg, #649EAD 0%, rgba(100, 158, 173, 0) 100%);}
+  
+  
+
+/* 필름 */
+.films{
+  margin: 0px auto;
+  width: 100%;
+  display: flex;
+  border-bottom: 3px solid #000;
+  position: relative;
+}
+.films> p{
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+.films > div:first-of-type{
+  position: absolute;right: 0%; bottom: 10%;
+  display: flex;
+}
+.films > div > p {
+  color: #000; 
+  font-weight: bold;
+}
+.films > div > p > a{
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin:0px 6px
+}
+.s_button1{display: none;}
+
+/* 검색창 */
+.films div:last-of-type{
+  width: 100px;
+  position: absolute; right:8%;top: 120%;
+
+}
+.search_box {
+  /* width: 100%; */
+
+  
+  /* border: 1px solid #000; */
+}
+.s_button{
+  width: 125%; height: 22px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #000;
+  z-index: 1001;
+}
+.fa-search{
+  display: inline;
+  font-size: 16px;
+  position: absolute; left: 107%;top: 15%;
+  z-index: 99999999;
+  color: #000;
+}
+
+
+/* 영화 컨텐츠 */
+.a-content-wrap{
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.a-content-wrap::after{
+  display: block;
+  content: "";
+  height: 15px;
+}
+/* 디즈니 컨텐층 */
+.content-wrap
+{position: absolute;
+  
+}
+.wrap{
+  /* margin-top: 70px; */
+  width: 100%;
+  margin: 0px auto;
+}
+#m-channel,#p-channel,#s-channel,#n-channel,#f-channel{display: none;}
+
+.movie{
+  display: grid;
+  grid-template-columns: repeat(2,40%);
+  /* grid-template-rows: repeat(2,210px); */
+  grid-column-gap: 10px;
+  grid-row-gap: 40px;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  /* width: 700px;  */
+
+}
+.movie > li{
+  width: 127px;
+}
+.movie > li > a img{
+  width: 40vw;
+  margin-bottom: 0px;
+}
+.movie > li:nth-child(4)~li{display: none;}
+
+/* 텍트스 */
+.text{ 
+  transform: translateY(-5px);
+  width: 40vw; height: 100px;
+  border: 1px solid #000;
+  color: #000;
+  box-sizing: border-box;
+}
+.text  > h3{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 8px 0px 8px 8px;
+}
+#s-channel h3:first-child{
+  font-size: 13px;
+  
+}
+.text > p{
+  font-size: 12px;
+  margin-left: 8px;
+  text-align: left;
+}
+.star{
+  padding-right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.wrap{text-align: center;}
+.m-button{
+  
+  width: 280px;
+  height: 27px;
+  color: #fff;
+  background: #161A3D;
+  margin: 0px auto;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 하단 번호  */
+.number_wrap{
+  display: none;
+  width: 300px;
+  margin: 0px auto;
+}
+.number{
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.number > li >a{
+  font-size: 16px;
+  color: #000;
+}
+}
+
+
+
+  
