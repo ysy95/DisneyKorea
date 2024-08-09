@@ -64,7 +64,10 @@ a[title="맨위로올라가기"] img{
   width: 100%;
 }
 @media screen and (min-width:1025px) {
-
+  header{
+    background: rgba(0, 0, 0, 0)!important;
+    height:70px;width: 100%;
+  }
   .main-video {
     width:100%;
     position: relative;
